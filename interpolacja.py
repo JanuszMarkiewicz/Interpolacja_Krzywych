@@ -163,7 +163,7 @@ def save_plot(filename="plot.jpg", dpi=300, linewidth_scale=0.6):
 # --------------------------------------------------------------------------------------------------------- #
 
 boolean = False
-filename = "konkurs-I-351009-dane.txt"
+filename = "interpolacja-dane.txt"
 
 # each is a different NIFS3:
 
@@ -342,7 +342,7 @@ x36, y36 = get_from_file("usta.txt")
 add_spline_to_plot(x36, y36, M=10, show_nodes=boolean)
 save_to_file((x36, y36), filename, M=10)
 
-save_plot("konkurs-I-351009.jpg", dpi=800, linewidth_scale=0.6) # save the plot
+save_plot("interpolacja.jpg", dpi=800, linewidth_scale=0.6) # save the plot
 #show_plot()
 
 
@@ -375,4 +375,4 @@ def process_file(file_path, output_file): # summary file generator
     with open(output_file, 'w') as out_file:
         out_file.write(f"{num_records}, {num_interpolation_points_total}, {sum_u_lengths_total}\n")
 
-process_file("konkurs-I-351009-dane.txt","konkurs-I-351009-podsumowanie.txt") # sum up values from input file and save in output file
+process_file("interpolacja-dane.txt","interpolacja-podsumowanie.txt") # sum up values from input file and save in output file
